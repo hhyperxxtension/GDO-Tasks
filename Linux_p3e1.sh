@@ -1,3 +1,4 @@
+#1.---------------------------------------------
 oleg@blond-figure:~/GD-Linux-3$ dd if=/dev/zero of=disk1.img bs=1MiB count=1000
 1000+0 records in
 1000+0 records out
@@ -17,6 +18,7 @@ oleg@blond-figure:~/GD-Linux-3$ losetup -l|grep img
 /dev/loop11         0      0         0  0 /home/oleg/GD-Linux-3/disk2.img                    0     512
 /dev/loop2          0      0         0  0 /home/oleg/GD-Linux-3/disk1.img                    0     512
 /dev/loop12         0      0         0  0 /home/oleg/GD-Linux-3/disk3.img                    0     512
+#2.---------------------------------------------
 oleg@blond-figure:~/GD-Linux-3$ sudo parted /dev/loop2
 GNU Parted 3.6
 Using /dev/loop2
@@ -189,7 +191,7 @@ Number of devices:  1
 Devices:
    ID        SIZE  PATH
     1   329.00MiB  /dev/loop12p3
-
+#3.---------------------------------------------
 oleg@blond-figure:~/GD-Linux-3$ sudo fsck.ext4 /dev/loop2p1
 [sudo] password for oleg:
 Sorry, try again.
